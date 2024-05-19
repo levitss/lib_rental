@@ -144,3 +144,4 @@ replay_pid*
 
 #for db security
 database.yml
+jwt.yml

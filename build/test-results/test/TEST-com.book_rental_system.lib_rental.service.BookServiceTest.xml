@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.book_rental_system.lib_rental.service.BookServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-19T17:36:55" hostname="LEVS" time="0.48">
+  <properties/>
+  <testcase name="testAddBook()" classname="com.book_rental_system.lib_rental.service.BookServiceTest" time="0.48"/>
+  <system-out><![CDATA[02:36:52.493 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.book_rental_system.lib_rental.service.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:36:52.570 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.book_rental_system.lib_rental.LibRentalApplication for test class com.book_rental_system.lib_rental.service.BookServiceTest
+02:36:52,914 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [console]
+02:36:52,914 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+02:36:52,917 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+02:36:52,931 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [console-infolog] not referenced. Skipping further processing.
+02:36:52,931 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.study] to INFO
+02:36:52,931 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@376e7531 - Propagating INFO level on Logger[com.study] onto the JUL framework
+02:36:52,931 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqlonly] to INFO
+02:36:52,932 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@376e7531 - Propagating INFO level on Logger[jdbc.sqlonly] onto the JUL framework
+02:36:52,932 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultsettable] to INFO
+02:36:52,932 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@376e7531 - Propagating INFO level on Logger[jdbc.resultsettable] onto the JUL framework
+02:36:52,932 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.connection] to OFF
+02:36:52,932 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@376e7531 - Propagating OFF level on Logger[jdbc.connection] onto the JUL framework
+02:36:52,932 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.audit] to OFF
+02:36:52,932 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@376e7531 - Propagating OFF level on Logger[jdbc.audit] onto the JUL framework
+02:36:52,932 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultset] to OFF
+02:36:52,932 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@376e7531 - Propagating OFF level on Logger[jdbc.resultset] onto the JUL framework
+02:36:52,932 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+02:36:52,932 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@376e7531 - Propagating INFO level on Logger[ROOT] onto the JUL framework
+02:36:52,932 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [console] to Logger[ROOT]
+02:36:52,932 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@35fb22a9 - End of configuration.
+02:36:52,933 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@6c8909c3 - Registering current configuration as safe fallback point
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2024-05-20 02:36:52,958  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+2024-05-20 02:36:52,976  INFO [com.book_rental_system.lib_rental.service.BookServiceTest] Starting BookServiceTest using Java 21.0.2 with PID 10684 (started by milki in C:\Users\milki\Desktop\springbootProj\programmers\lib_rental)
+2024-05-20 02:36:52,976  INFO [com.book_rental_system.lib_rental.service.BookServiceTest] No active profile set, falling back to 1 default profile: "default"
+2024-05-20 02:36:53,488  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-20 02:36:53,528  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-05-20 02:36:53,613  WARN [org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[com.book_rental_system.lib_rental]' package. Please check your configuration.
+2024-05-20 02:36:53,838  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-20 02:36:53,945  INFO [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1b30a54e
+2024-05-20 02:36:53,947  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-20 02:36:54,029  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-20 02:36:54,083  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-20 02:36:54,117  INFO [org.hibernate.cache.internal.RegionFactoryInitiator] HHH000026: Second-level cache disabled
+2024-05-20 02:36:54,320  INFO [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-20 02:36:54,363  INFO [jdbc.sqlonly] select version()
+
+2024-05-20 02:36:54,364  INFO [jdbc.sqltiming] select version()
+ {executed in 1 msec}
+2024-05-20 02:36:55,072  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-20 02:36:55,074  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 02:36:55,285  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-20 02:36:55,300  WARN [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] 
+
+Using generated security password: 4eb44240-233c-4812-9274-328b6162bfb2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-20 02:36:55,552  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25814d3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@436103b1, org.springframework.security.web.context.SecurityContextHolderFilter@481eb705, org.springframework.security.web.header.HeaderWriterFilter@711261c7, org.springframework.web.filter.CorsFilter@427128a6, org.springframework.security.web.csrf.CsrfFilter@627cb3ed, org.springframework.security.web.authentication.logout.LogoutFilter@10b0dd3a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@601ca994, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5bb661e0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@701c413, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6821d4e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c5c2a84, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42a89cef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28468162, org.springframework.security.web.access.ExceptionTranslationFilter@770c3ca2, org.springframework.security.web.access.intercept.AuthorizationFilter@4a561f7d]
+2024-05-20 02:36:55,872  INFO [com.book_rental_system.lib_rental.service.BookServiceTest] Started BookServiceTest in 3.175 seconds (process running for 4.089)
+Hibernate: 
+    select
+        bi1_0.isbn,
+        bi1_0.author,
+        bi1_0.kdc,
+        bi1_0.pub_date,
+        bi1_0.publisher,
+        bi1_0.title 
+    from
+        book_info bi1_0 
+    where
+        bi1_0.isbn=?
+2024-05-20 02:36:56,311  INFO [jdbc.sqlonly] select bi1_0.isbn,bi1_0.author,bi1_0.kdc,bi1_0.pub_date,bi1_0.publisher,bi1_0.title from book_info bi1_0 where bi1_0.isbn=9783161484100
+
+2024-05-20 02:36:56,313  INFO [jdbc.sqltiming] select bi1_0.isbn,bi1_0.author,bi1_0.kdc,bi1_0.pub_date,bi1_0.publisher,bi1_0.title from book_info bi1_0 where bi1_0.isbn=9783161484100
+ {executed in 2 msec}
+2024-05-20 02:36:56,321  INFO [jdbc.resultsettable] 
+|---------|-------|-------|---------------------------|----------|------|
+|isbn     |author |kdc    |pub_date                   |publisher |title |
+|---------|-------|-------|---------------------------|----------|------|
+|[unread] |gggg   |800.44 |2024-05-20 02:34:20.647838 |ww        |test  |
+|---------|-------|-------|---------------------------|----------|------|
+
+Hibernate: 
+    update
+        book_info 
+    set
+        author=?,
+        kdc=?,
+        pub_date=?,
+        publisher=?,
+        title=? 
+    where
+        isbn=?
+2024-05-20 02:36:56,339  INFO [jdbc.sqlonly] update book_info set author='gggg',kdc='800.w44',pub_date='05/20/2024 02:36:56.265',publisher='ww',title='test' where isbn=9783161484100
+
+2024-05-20 02:36:56,341  INFO [jdbc.sqltiming] update book_info set author='gggg',kdc='800.w44',pub_date='05/20/2024 02:36:56.265',publisher='ww',title='test' where isbn=9783161484100
+ {executed in 1 msec}
+Hibernate: 
+    select
+        null,
+        bi1_0.author,
+        bi1_0.kdc,
+        bi1_0.pub_date,
+        bi1_0.publisher,
+        bi1_0.title 
+    from
+        book_info bi1_0 
+    where
+        bi1_0.isbn=?
+2024-05-20 02:36:56,349  INFO [jdbc.sqlonly] select null,bi1_0.author,bi1_0.kdc,bi1_0.pub_date,bi1_0.publisher,bi1_0.title from book_info bi1_0 where bi1_0.isbn=9783161484100
+
+2024-05-20 02:36:56,350  INFO [jdbc.sqltiming] select null,bi1_0.author,bi1_0.kdc,bi1_0.pub_date,bi1_0.publisher,bi1_0.title from book_info bi1_0 where bi1_0.isbn=9783161484100
+ {executed in 1 msec}
+2024-05-20 02:36:56,351  INFO [jdbc.resultsettable] 
+|---------|-------|--------|---------------------------|----------|------|
+|?column? |author |kdc     |pub_date                   |publisher |title |
+|---------|-------|--------|---------------------------|----------|------|
+|[null]   |gggg   |800.w44 |2024-05-20 02:36:56.265182 |ww        |test  |
+|---------|-------|--------|---------------------------|----------|------|
+
+Hibernate: 
+    insert 
+    into
+        book
+        (isbn, resv) 
+    values
+        (?, ?)
+2024-05-20 02:36:56,354  INFO [jdbc.sqlonly] insert into book (isbn,resv) values (9783161484100,0)
+
+2024-05-20 02:36:56,355  INFO [jdbc.sqltiming] insert into book (isbn,resv) values (9783161484100,0)
+ {executed in 1 msec}
+2024-05-20 02:36:56,355  INFO [jdbc.sqltiming] getGeneratedKeys on query: insert into book (isbn,resv) values (9783161484100,0)
+ {executed in 0 msec}
+2024-05-20 02:36:56,357  INFO [jdbc.resultsettable] 
+|--------|---------|---------|
+|book_id |resv     |isbn     |
+|--------|---------|---------|
+|4       |[unread] |[unread] |
+|--------|---------|---------|
+
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\milki\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.13\979ce25f7d3096a2e82214ba7dc972a05ce7a171\byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
